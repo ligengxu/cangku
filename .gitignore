@@ -1,0 +1,41 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# Node.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Electron
+frontend/electron/dist/
+
+# Scanner
+scanner/fruit-scanner
+scan-monitor-client/scan-monitor-client
+scan-bridge/scan-bridge
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build
+dist/
+build/
