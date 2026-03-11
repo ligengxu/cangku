@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: fruit-admin-api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=36.134.229.82
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASS=Amz24639.
+      - DB_NAME=my_sk9
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build: ./frontend
+    container_name: fruit-admin-web
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  redis:
+    image: redis:7-alpine
+    container_name: fruit-admin-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  nginx:
+    image: nginx:alpine
+    container_name: fruit-admin-nginx
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend
+      - backend
+
+volumes:
+  redis_data:

@@ -1,0 +1,39 @@
+appId: com.fruitadmin.desktop
+productName: 果管系统
+copyright: Copyright © 2024 FruitAdmin
+
+directories:
+  output: dist-electron
+
+files:
+  - electron/**
+  - package.json
+
+extraResources:
+  - from: public/icon.ico
+    to: icon.ico
+    filter:
+      - "**/*"
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: public/icon.ico
+  artifactName: "${productName}-Setup-${version}.${ext}"
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: public/icon.ico
+  uninstallerIcon: public/icon.ico
+  installerHeaderIcon: public/icon.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 果管系统
+  installerLanguages:
+    - zh_CN
+    - en_US
+
+publish: null

@@ -1,0 +1,15 @@
+{
+  "udp_host": "0.0.0.0",
+  "udp_port": 5001,
+  "web_port": 9090,
+  "db_host": "36.134.229.82",
+  "db_port": 3306,
+  "db_user": "root",
+  "db_pass": "Amz24639.",
+  "db_name": "my_sk9",
+  "max_workers": 32,
+  "recv_buffer_kb": 1024,
+  "db_max_open": 50,
+  "db_max_idle": 10,
+  "db_max_life_min": 5
+}

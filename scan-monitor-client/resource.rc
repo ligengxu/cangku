@@ -1,0 +1,32 @@
+#include <winver.h>
+
+IDI_ICON1 ICON "app.ico"
+1 RT_MANIFEST "app.manifest"
+
+1 VERSIONINFO
+FILEVERSION     1,3,0,0
+PRODUCTVERSION  1,3,0,0
+FILEFLAGSMASK   0x3fL
+FILEFLAGS       0x0L
+FILEOS          0x40004L
+FILETYPE        0x1L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "FruitAdmin"
+            VALUE "FileDescription",  "Scan Monitor - Barcode Scanner Client"
+            VALUE "FileVersion",      "1.3.0.0"
+            VALUE "InternalName",     "scan-monitor"
+            VALUE "LegalCopyright",   "FruitAdmin 2026"
+            VALUE "OriginalFilename", "scan-monitor.exe"
+            VALUE "ProductName",      "Fruit Admin Scan Monitor"
+            VALUE "ProductVersion",   "1.3.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END

@@ -1,0 +1,14 @@
+{
+  "name": "果管系统",
+  "short_name": "果管",
+  "description": "水果仓储生产管理系统",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#001529",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
